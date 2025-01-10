@@ -15,7 +15,7 @@ declare global {
   }
 }
 
-// Check if the environment variable is set
+
 if (!process.env.MONGODB_URI) {
   throw new Error('Please add your Mongo URI to .env.local');
 }
