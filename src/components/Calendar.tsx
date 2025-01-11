@@ -31,7 +31,7 @@ const ReservationCalendar: React.FC = () => {
       [key]: (prev[key] || 0) + 1
     }));
 
-    // Reset selected time after reservation
+    
     setSelectedTime(null);
   };
 
