@@ -28,7 +28,7 @@ const Home: React.FC = () => {
       </main>
 
       <footer className="bg-blue-500 p-4 text-white text-center">
-        &copy; 2023 Reservation App
+        &copy; 2025 Reservation App
       </footer>
     </div>
   );
