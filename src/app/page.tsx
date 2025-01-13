@@ -21,7 +21,7 @@ const Home: React.FC = () => {
 
       <main className="p-8">
         <section className="landing-page">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Our Reservation App</h1>
+          <h1 className="text-4xl font-bold mb-4">Welcome to Our Shop</h1>
           <p className="mb-8">Book your slots easily and efficiently.</p>
           <Calendar />
         </section>
