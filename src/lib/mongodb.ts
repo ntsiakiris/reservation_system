@@ -1,31 +1,33 @@
-import { MongoClient } from 'mongodb';
+// connect with mongodb 
 
-const uri = process.env.MONGODB_URI as string;
-const options = {};
+// import { MongoClient } from 'mongodb';
 
-let client: MongoClient;
-let clientPromise: Promise<MongoClient>;
+// const uri = process.env.MONGODB_URI as string;
+// const options = {};
 
-// Extend the global object to include _mongoClientPromise
-declare global {
-  var _mongoClientPromise: Promise<MongoClient> | undefined;
-}
+// let client: MongoClient;
+// let clientPromise: Promise<MongoClient>;
 
-if (!process.env.MONGODB_URI) {
-  throw new Error('Please add your Mongo URI to .env.local');
-}
+// // Extend the global object to include _mongoClientPromise
+// declare global {
+//   var _mongoClientPromise: Promise<MongoClient> | undefined;
+// }
 
-if (process.env.NODE_ENV === 'development') {
-  // In development, reuse the global client promise
-  if (!global._mongoClientPromise) {
-    client = new MongoClient(uri, options);
-    global._mongoClientPromise = client.connect();
-  }
-  clientPromise = global._mongoClientPromise;
-} else {
-  // In production, always create a new client
-  client = new MongoClient(uri, options);
-  clientPromise = client.connect();
-}
+// if (!process.env.MONGODB_URI) {
+//   throw new Error('Please add your Mongo URI to .env.local');
+// }
 
-export default clientPromise;
+// if (process.env.NODE_ENV === 'development') {
+//   // In development, reuse the global client promise
+//   if (!global._mongoClientPromise) {
+//     client = new MongoClient(uri, options);
+//     global._mongoClientPromise = client.connect();
+//   }
+//   clientPromise = global._mongoClientPromise;
+// } else {
+//   // In production, always create a new client
+//   client = new MongoClient(uri, options);
+//   clientPromise = client.connect();
+// }
+
+// export default clientPromise;
