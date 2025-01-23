@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import { geistSans, geistMono } from 'some-module'; // Comment out or remove this line if not needed
 
 export const metadata: Metadata = {
   title: "Reservation System",
